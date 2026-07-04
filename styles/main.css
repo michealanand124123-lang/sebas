@@ -159,18 +159,41 @@ header.scrolled {
   align-items: center;
 }
 
-/* Logo Image in Navbar */
+/* Logo Link and Brand Images in Navbar */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-decoration: none;
+  z-index: 1001;
+}
+
 .logo-img {
   height: 56px;
   width: auto;
   border-radius: 50%;
   object-fit: contain;
-  z-index: 1001;
   transition: transform var(--transition-normal);
   display: block;
 }
-.logo-img:hover {
+.logo-link:hover .logo-img {
   transform: scale(1.05);
+}
+
+.logo-text-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+.logo-link:hover .logo-text-img {
+  transform: scale(1.02);
+}
+
+/* Make the purple logo text white in dark mode for contrast */
+[data-theme="dark"] .logo-text-img {
+  filter: brightness(0) invert(1);
 }
 
 /* Fallback text logo (hidden when image loads) */
