@@ -42,6 +42,7 @@
                 <a href="#about">About</a>
                 <a href="#products">Our Cakes</a>
                 <a href="#custom">Custom Orders</a>
+                <a href="#menu" id="navMenuBtn">Our Menu</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#testimonials">Testimonials</a>
                 <a href="#faq">FAQ</a>
@@ -72,7 +73,7 @@
                     <div class="hero-btns">
                         <a href="#products" class="btn btn-primary">Explore Our Cakes</a>
                         <a href="#contact" class="btn btn-secondary">Book Your Cake</a>
-                        <a href="#products" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.8);">Our Menu</a>
+                        <button id="menuBtn" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.8);">Our Menu</button>
                         <button id="galleryBtn" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.8);">Gallery</button>
                         <button id="reviewsBtn" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.8);">Reviews</button>
                     </div>
@@ -534,6 +535,65 @@
                     <a href="https://www.instagram.com/sebas_homebaker?igsh=MTduejJjdjhzd2F5Mg==" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
                         <i class="fa-brands fa-instagram" style="font-size: 1.2rem;"></i> View More on Instagram
                     </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Modal -->
+    <div class="modal" id="menuModal">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <h2 class="section-title">Our Menu</h2>
+                <button class="modal-close" id="menuModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="section-subtitle" style="margin-bottom: 2rem;">Explore our delicious variety of custom bakes, cupcakes, brownies, tea cakes, and flavour varieties.</p>
+                
+                <div class="menu-grid">
+                    <!-- Menu Item 1 -->
+                    <div class="menu-card">
+                        <div class="menu-img-wrap">
+                            <img src="assets/images/menu_flavours.jpg" alt="Flavour Cakes & Premium Cakes Menu" class="menu-img clickable-menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Flavour & Premium Cakes</h3>
+                            <p>Choose from our classic flavour cakes like Vanilla, Chocolate, Black Forest, Black Currant, and Oreo, or treat yourself to our Premium selection including Choco Truffle, Rasamalai, Biscoff, Ferrero, and Gulab Jamun. Baked fresh with love and customized to perfection for your celebrations!</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 2 -->
+                    <div class="menu-card">
+                        <div class="menu-img-wrap">
+                            <img src="assets/images/menu_bento.jpg" alt="Bento and Mini Cakes Menu" class="menu-img clickable-menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Bento & Mini Cakes</h3>
+                            <p>Perfect for intimate celebrations or sweet gifts! Our cute Bento cakes come in delicious flavours like Choco Truffle, Red Velvet, Nutella, Butterscotch, and fruit varieties. Beautifully packed in classic eco-friendly clamshell boxes with custom hand-piped designs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 3 -->
+                    <div class="menu-card">
+                        <div class="menu-img-wrap">
+                            <img src="assets/images/menu_brownies.jpg" alt="Fudgy Brownies Menu" class="menu-img clickable-menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Gourmet Fudgy Brownies</h3>
+                            <p>Indulge in our super fudgy and rich chocolate brownies. Available in exciting variations: Classic Fudge, Nuts, Nutella, Oreo, Biscoff, Lava, and Eggless. Ordered in half-kg packs, these brownie slices are the perfect crowd-pleaser for any chocolate lover!</p>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 4 -->
+                    <div class="menu-card">
+                        <div class="menu-img-wrap">
+                            <img src="assets/images/menu_teacakes.jpg" alt="Tea Cakes Menu" class="menu-img clickable-menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Premium Tea Cakes</h3>
+                            <p>Light, buttery, and perfect for your tea-time cravings! Our half-kg loaf tea cakes are baked to soft perfection. Try our popular Almond, Cashew, Pistachio, Banana Walnut, Tutti Frutti, Marble, or Classic Vanilla and Chocolate loaf varieties.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

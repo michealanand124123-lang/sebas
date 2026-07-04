@@ -102,6 +102,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Make menu images clickable to view full-screen in lightbox
+    const clickableMenuImages = document.querySelectorAll('.clickable-menu-img');
+    clickableMenuImages.forEach(img => {
+        img.addEventListener('click', () => {
+            const imgSrc = img.getAttribute('src');
+            lightboxImg.setAttribute('src', imgSrc);
+            lightbox.classList.add('active');
+        });
+    });
+
     lightboxClose.addEventListener('click', () => {
         lightbox.classList.remove('active');
     });
@@ -112,12 +122,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 6a. Gallery and Reviews Modal Handlers
+    // 6a. Gallery, Menu and Reviews Modal Handlers
     const galleryBtn = document.getElementById('galleryBtn');
+    const menuBtn = document.getElementById('menuBtn');
+    const navMenuBtn = document.getElementById('navMenuBtn');
     const reviewsBtn = document.getElementById('reviewsBtn');
     const galleryModal = document.getElementById('galleryModal');
+    const menuModal = document.getElementById('menuModal');
     const reviewsModal = document.getElementById('reviewsModal');
     const galleryModalClose = document.getElementById('galleryModalClose');
+    const menuModalClose = document.getElementById('menuModalClose');
     const reviewsModalClose = document.getElementById('reviewsModalClose');
 
     // Gallery Modal Open Function
@@ -129,6 +143,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Gallery Modal Close Function
     const closeGallery = () => {
         galleryModal.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    // Menu Modal Open Function
+    const openMenu = () => {
+        menuModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    // Menu Modal Close Function
+    const closeMenu = () => {
+        menuModal.classList.remove('active');
         document.body.style.overflow = '';
     };
 
@@ -160,6 +186,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Menu Trigger Event Listeners
+    if (menuBtn) {
+        menuBtn.addEventListener('click', openMenu);
+    }
+    if (navMenuBtn) {
+        navMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Close mobile menu if open
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').className = 'fa-solid fa-bars';
+            }
+            openMenu();
+        });
+    }
+    if (menuModalClose) {
+        menuModalClose.addEventListener('click', closeMenu);
+    }
+    if (menuModal) {
+        menuModal.addEventListener('click', (e) => {
+            if (e.target === menuModal) {
+                closeMenu();
+            }
+        });
+    }
+
     // Reviews Trigger Event Listeners
     reviewsBtn.addEventListener('click', openReviews);
     document.querySelectorAll('a[href="#testimonials"]').forEach(link => {
@@ -180,6 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeGallery();
+            closeMenu();
             closeReviews();
         }
     });
@@ -239,16 +292,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 dateFormatted = d.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
             }
 
-            // Build the WhatsApp message
-            let msg = `Hello Seba's Home Baker! 🎂\n\nI'd like to place a cake order.\n\n`;
-            msg += `👤 *Name:* ${name}\n`;
-            msg += `📞 *Phone:* ${phone}\n`;
-            msg += `🎉 *Occasion:* ${occasion}\n`;
-            msg += `🎂 *Cake Type / Flavour:* ${cakeType}\n`;
-            msg += `📅 *Date Required:* ${dateFormatted}\n`;
-            if (weight) msg += `⚖️ *Weight:* ${weight}\n`;
-            if (customMsg) msg += `✍️ *Custom Message / Details:* ${customMsg}\n`;
-            msg += `\nPlease contact me to discuss the design and confirm the order. Thank you! 🙏`;
+            // Build the WhatsApp message without emojis to avoid question-mark characters on unsupported devices
+            let msg = `Hello Seba's Home Baker!\n\nI'd like to place a cake order.\n\n`;
+            msg += `*Name:* ${name}\n`;
+            msg += `*Phone:* ${phone}\n`;
+            msg += `*Occasion:* ${occasion}\n`;
+            msg += `*Cake Type / Flavour:* ${cakeType}\n`;
+            msg += `*Date Required:* ${dateFormatted}\n`;
+            if (weight) msg += `*Weight:* ${weight}\n`;
+            if (customMsg) msg += `*Custom Message / Details:* ${customMsg}\n`;
+            msg += `\nPlease contact me to discuss the design and confirm the order. Thank you!`;
 
             // Animate button
             const btn = document.getElementById('waSubmitBtn');
@@ -270,6 +323,53 @@ document.addEventListener('DOMContentLoaded', () => {
             el.addEventListener('input', () => { el.style.borderColor = ''; });
         });
     }
+
+    // 8b. Enquire Now Button Handlers (Pre-fill order form and smooth scroll with soft focus highlight)
+    const enquireBtns = document.querySelectorAll('.product-card .btn-outline, .product-card .btn');
+    const cakeTypeInput = document.getElementById('wa_cake_type');
+    const nameInput = document.getElementById('wa_name');
+    const enquiryFormEl = document.getElementById('enquiryForm');
+    const contactSec = document.getElementById('contact');
+
+    enquireBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Get product name
+            const card = btn.closest('.product-card');
+            if (card) {
+                const productTitle = card.querySelector('h3').textContent.trim();
+                if (cakeTypeInput) {
+                    cakeTypeInput.value = productTitle;
+                    // Trigger input event to clear error boundary color if any
+                    cakeTypeInput.style.borderColor = '';
+                }
+            }
+            
+            // Smooth scroll to contact section with header offset
+            if (contactSec) {
+                const headerOffset = 90;
+                const elementPosition = contactSec.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+            
+            // Soft focus and form glow highlight
+            setTimeout(() => {
+                if (nameInput) nameInput.focus();
+                if (enquiryFormEl) {
+                    enquiryFormEl.classList.add('glow-highlight');
+                    setTimeout(() => {
+                        enquiryFormEl.classList.remove('glow-highlight');
+                    }, 2000);
+                }
+            }, 800);
+        });
+    });
 
     // 9. Dark Mode Toggle
     const themeToggle = document.getElementById('themeToggle');
