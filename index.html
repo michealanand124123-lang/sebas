@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Seba's Home Baker - Crafted with Love, Baked to Perfection. Custom handcrafted cakes for all occasions in Chennai.">
+    <title>Seba's Home Baker | Premium Custom Cakes</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#home" aria-label="Seba's Home Baker">
+                <img src="assets/images/logo.png" alt="Seba's Home Baker Logo" class="logo-img">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Our Cakes</a>
+                <a href="#custom">Custom Orders</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg">
+                <img src="assets/images/hero_cake.png" alt="Luxury Homemade Custom Cake" loading="lazy">
+            </div>
+            <div class="container">
+                <div class="hero-content fade-up">
+                    <h1>Freshly Baked Happiness for Every Celebration</h1>
+                    <p>Handcrafted custom cakes made with premium ingredients for birthdays, weddings, anniversaries,
+                        baby showers, engagements, festivals, and every special occasion.</p>
+                    <div class="hero-btns">
+                        <a href="#products" class="btn btn-primary">Explore Our Cakes</a>
+                        <a href="#contact" class="btn btn-secondary">Book Your Cake</a>
+                        <button id="galleryBtn" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.8);">Gallery</button>
+                        <button id="reviewsBtn" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.8);">Reviews</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image fade-up">
+                        <img src="assets/images/ravianna_birthday_cake.jpg" alt="Handcrafted Custom Cakes & Cupcakes" loading="lazy">
+                    </div>
+                    <div class="about-content fade-up delay-200">
+                        <h2 class="section-title">Crafted with Love, Baked to Perfection</h2>
+                        <p>Welcome to Seba's Home Baker, where passion meets pastry. We believe that every celebration
+                            deserves a centerpiece that is as delicious as it is beautiful.</p>
+                        <p>Our journey started in a small home kitchen with a simple mission: to bake from the heart.
+                            Today, we pride ourselves on creating handcrafted custom cakes using only the finest premium
+                            ingredients. From our kitchen to your table, we guarantee freshness, impeccable hygiene, and
+                            100% homemade goodness.</p>
+                        <p>Whether you need an elegant wedding cake or a fun birthday treat, we pour our love into every
+                            single detail to ensure complete customer satisfaction.</p>
+                        <br>
+                        <a href="#contact" class="btn btn-primary">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="section" style="background-color: var(--color-secondary);">
+            <div class="container">
+                <h2 class="section-title text-center fade-up">Why Choose Us</h2>
+                <p class="section-subtitle text-center fade-up delay-100">The secret ingredient is always love, but here
+                    is what makes us special.</p>
+
+                <div class="features-grid">
+                    <div class="feature-card fade-up delay-100">
+                        <i class="fa-solid fa-leaf feature-icon"></i>
+                        <h3>Fresh Ingredients</h3>
+                        <p>Baked fresh to order with the finest ingredients available.</p>
+                    </div>
+                    <div class="feature-card fade-up delay-200">
+                        <i class="fa-solid fa-house-chimney feature-icon"></i>
+                        <h3>100% Homemade</h3>
+                        <p>Authentic homemade taste crafted in our very own kitchen.</p>
+                    </div>
+                    <div class="feature-card fade-up delay-300">
+                        <i class="fa-solid fa-star feature-icon"></i>
+                        <h3>Premium Quality</h3>
+                        <p>Uncompromising quality in every bite, every time.</p>
+                    </div>
+                    <div class="feature-card fade-up delay-400">
+                        <i class="fa-solid fa-wand-magic-sparkles feature-icon"></i>
+                        <h3>Customized Designs</h3>
+                        <p>Your imagination brought to life in sugar and cream.</p>
+                    </div>
+                    <div class="feature-card fade-up delay-100">
+                        <i class="fa-solid fa-egg feature-icon"></i>
+                        <h3>Eggless Available</h3>
+                        <p>Delicious eggless options baked perfectly for you.</p>
+                    </div>
+                    <div class="feature-card fade-up delay-200">
+                        <i class="fa-solid fa-pump-soap feature-icon"></i>
+                        <h3>Hygienic Kitchen</h3>
+                        <p>Strict hygiene standards maintained at all times.</p>
+                    </div>
+                    <div class="feature-card fade-up delay-300">
+                        <i class="fa-solid fa-truck-fast feature-icon"></i>
+                        <h3>On-Time Delivery</h3>
+                        <p>Safe and timely delivery to your celebration venue.</p>
+                    </div>
+                    <div class="feature-card fade-up delay-400">
+                        <i class="fa-solid fa-face-smile feature-icon"></i>
+                        <h3>Friendly Service</h3>
+                        <p>We are here to help you make your day special.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Products -->
+        <section id="products" class="section">
+            <div class="container">
+                <h2 class="section-title text-center fade-up">Our Premium Creations</h2>
+                <p class="section-subtitle text-center fade-up delay-100">Explore our wide range of handcrafted cakes
+                    and desserts. All items are custom-made.</p>
+
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card fade-up">
+                        <div class="product-img-wrap">
+                            <img src="assets/images/moksha_birthday_cake.jpg" alt="Custom Birthday Cakes" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Birthday Cakes</h3>
+                                <p>Make birthdays unforgettable with our custom-designed, flavor-packed cakes.</p>
+                            </div>
+                            <a href="#contact" class="btn btn-outline">Enquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card fade-up delay-100">
+                        <div class="product-img-wrap">
+                            <img src="assets/images/wedding_cake_premium.jpg" alt="Premium Wedding Cakes" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Wedding Cakes</h3>
+                                <p>Elegant, multi-tiered masterpieces to celebrate your special day in style.</p>
+                            </div>
+                            <a href="#contact" class="btn btn-outline">Enquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card fade-up delay-200">
+                        <div class="product-img-wrap">
+                            <img src="assets/images/cupcakes.png" alt="Premium Cupcakes" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Premium Cupcakes</h3>
+                                <p>Delightful swirls of flavor, perfect for sharing and gifting.</p>
+                            </div>
+                            <a href="#contact" class="btn btn-outline">Enquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="product-card fade-up delay-300">
+                        <div class="product-img-wrap">
+                            <img src="assets/images/brownies.jpg" alt="Decadent Gourmet Brownies" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Brownies</h3>
+                                <p>Rich, fudgy, and decadent chocolate brownies crafted to perfection for any craving.</p>
+                            </div>
+                            <a href="#contact" class="btn btn-outline">Enquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="product-card fade-up">
+                        <div class="product-img-wrap">
+                            <img src="assets/images/cookies.png" alt="Gourmet Cookies" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Cookies</h3>
+                                <p>Freshly baked, chewy, and rich chocolate chip cookies made from scratch.</p>
+                            </div>
+                            <a href="#contact" class="btn btn-outline">Enquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="product-card fade-up delay-100">
+                        <div class="product-img-wrap">
+                            <img src="assets/images/custom_theme_cake.jpg" alt="Custom Theme Cakes" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Custom Theme Cakes</h3>
+                                <p>Bring your imagination to reality with our highly customized theme cakes.</p>
+                            </div>
+                            <a href="#contact" class="btn btn-outline">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 3rem;">
+                    <p class="fade-up">We also offer: Anniversary Cakes, Baby Shower Cakes, Photo Cakes, Bento Cakes,
+                        Brownies, Macarons & more!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Orders -->
+        <section id="custom" class="section">
+            <div class="container">
+                <div class="custom-orders fade-up">
+                    <h2 class="section-title">Your Cake, Your Way</h2>
+                    <p class="section-subtitle" style="margin-inline: auto;">Every celebration is unique, and your cake
+                        should be too. At Seba's Home Baker, we offer endless customization options. Let us craft the
+                        perfect dessert for your special moment.</p>
+
+                    <div
+                        style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                        <span class="btn btn-outline" style="cursor:default">Shape & Size</span>
+                        <span class="btn btn-outline" style="cursor:default">Flavour & Cream</span>
+                        <span class="btn btn-outline" style="cursor:default">Theme & Colours</span>
+                        <span class="btn btn-outline" style="cursor:default">Photo & Message</span>
+                        <span class="btn btn-outline" style="cursor:default">Custom Toppers</span>
+                    </div>
+
+                    <a href="#contact" class="btn btn-primary">Request a Custom Cake</a>
+
+                    <div class="timeline">
+                        <div class="timeline-step fade-up delay-100">
+                            <div class="step-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                            <h4>Choose Category</h4>
+                        </div>
+                        <i class="fa-solid fa-arrow-right timeline-arrow fade-up delay-100"></i>
+                        <div class="timeline-step fade-up delay-200">
+                            <div class="step-icon"><i class="fa-solid fa-comment-dots"></i></div>
+                            <h4>Share Requirements</h4>
+                        </div>
+                        <i class="fa-solid fa-arrow-right timeline-arrow fade-up delay-200"></i>
+                        <div class="timeline-step fade-up delay-300">
+                            <div class="step-icon"><i class="fa-solid fa-palette"></i></div>
+                            <h4>Discuss Design</h4>
+                        </div>
+                        <i class="fa-solid fa-arrow-right timeline-arrow fade-up delay-300"></i>
+                        <div class="timeline-step fade-up delay-400">
+                            <div class="step-icon"><i class="fa-solid fa-check"></i></div>
+                            <h4>Confirm Order</h4>
+                        </div>
+                        <i class="fa-solid fa-arrow-right timeline-arrow fade-up delay-400"></i>
+                        <div class="timeline-step fade-up delay-500">
+                            <div class="step-icon"><i class="fa-solid fa-fire-burner"></i></div>
+                            <h4>Fresh Baking</h4>
+                        </div>
+                        <i class="fa-solid fa-arrow-right timeline-arrow fade-up delay-500"></i>
+                        <div class="timeline-step fade-up delay-600">
+                            <div class="step-icon"><i class="fa-solid fa-box-open"></i></div>
+                            <h4>Delivery/Pickup</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <h2 class="section-title text-center fade-up">Frequently Asked Questions</h2>
+                <div class="faq-container fade-up delay-100">
+                    <div class="faq-item">
+                        <div class="faq-question">How to order? <i class="fa-solid fa-chevron-down faq-icon"></i></div>
+                        <div class="faq-answer">
+                            <p>You can easily place an order by contacting us via WhatsApp, phone call, or by filling
+                                out the enquiry form in the contact section below. We will discuss your requirements and
+                                confirm the order personally.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How many days in advance should I order? <i
+                                class="fa-solid fa-chevron-down faq-icon"></i></div>
+                        <div class="faq-answer">
+                            <p>For standard cakes, we recommend at least 2-3 days' notice. For custom theme cakes or
+                                wedding cakes, please contact us 1-2 weeks in advance to ensure availability and proper
+                                detailing.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Do you make eggless cakes? <i
+                                class="fa-solid fa-chevron-down faq-icon"></i></div>
+                        <div class="faq-answer">
+                            <p>Yes, absolutely! We offer delicious 100% eggless options for almost all our cakes and
+                                desserts.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Can I customize my cake completely? <i
+                                class="fa-solid fa-chevron-down faq-icon"></i></div>
+                        <div class="faq-answer">
+                            <p>Yes, we specialize in custom cakes. You can choose the shape, size, flavor, theme,
+                                colors, and even provide a reference photo for us to recreate.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Do you provide delivery? <i
+                                class="fa-solid fa-chevron-down faq-icon"></i></div>
+                        <div class="faq-answer">
+                            <p>Yes, we provide safe delivery across Chennai. Delivery charges apply based on the
+                                distance. You can also opt for self-pickup from our location in Anna Nagar.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How should cakes be stored? <i
+                                class="fa-solid fa-chevron-down faq-icon"></i></div>
+                        <div class="faq-answer">
+                            <p>Cream cakes should be refrigerated and taken out 30 minutes before serving. Fondant cakes
+                                should be kept in a cool AC room, away from direct sunlight and humidity. We provide
+                                specific storage instructions with every order.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" style="background-color: var(--color-primary);">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info fade-up">
+                        <h2 class="section-title">Get in Touch</h2>
+                        <p style="margin-bottom: 2rem;">Ready to order your dream cake? Contact us today to discuss your
+                            requirements. We'd love to bake for your special occasion!</p>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>100C(SF NO 167/5)<br>Annamalai Nagar(nearby weekly market),malumichampatty, Coimbatore<br>Tamil Nadu 641050</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Phone / WhatsApp</h4>
+                                <p><a href="tel:+919500351474" style="color:inherit;">+91 95003 51474</a></p>
+                                <p><a href="tel:+919894518997" style="color:inherit;">+91 98945 18997</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>Sebastin161989@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Sunday<br>9:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper fade-up delay-200">
+                        <h2 class="section-title">Place Your Order</h2>
+                        <p style="color: var(--color-text-light); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                            Fill in the details below and click <strong>Send Order on WhatsApp</strong>. Your order
+                            details will open in WhatsApp — just press send!
+                        </p>
+
+                        <!-- WhatsApp Order Badge -->
+                        <div
+                            style="display:flex; align-items:center; gap:0.6rem; background:#e8f8f0; border:1px solid #25D366; border-radius:var(--radius-sm); padding:0.6rem 1rem; margin-bottom:1.5rem;">
+                            <i class="fa-brands fa-whatsapp" style="color:#25D366; font-size:1.4rem;"></i>
+                            <span style="font-size:0.88rem; color:#155724; font-weight:500;">Order goes directly to the
+                                baker's WhatsApp. No payment needed now.</span>
+                        </div>
+
+                        <form class="contact-form" id="enquiryForm" novalidate>
+                            <div class="form-group">
+                                <label for="wa_name">Your Name *</label>
+                                <input type="text" id="wa_name" placeholder="e.g., Priya" required>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="wa_phone">Phone Number *</label>
+                                    <input type="tel" id="wa_phone" placeholder="e.g., 9876543210" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="wa_occasion">Occasion *</label>
+                                    <input type="text" id="wa_occasion" placeholder="e.g., Birthday" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="wa_cake_type">Cake Type / Flavour *</label>
+                                <input type="text" id="wa_cake_type" placeholder="e.g., Chocolate Truffle, Red Velvet"
+                                    required>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="wa_date">Date Required *</label>
+                                    <input type="date" id="wa_date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="wa_weight">Cake Weight (kg)</label>
+                                    <input type="text" id="wa_weight" placeholder="e.g., 1.5 kg">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="wa_message">Custom Message on Cake / Extra Details</label>
+                                <textarea id="wa_message" rows="3"
+                                    placeholder="e.g., Happy Birthday Rahul! Theme: Paw Patrol"></textarea>
+                            </div>
+                            <button type="submit" id="waSubmitBtn" class="btn btn-primary"
+                                style="margin-top: 1rem; width:100%; font-size:1.05rem; display:flex; align-items:center; justify-content:center; gap:0.6rem;">
+                                <i class="fa-brands fa-whatsapp"></i> Send Order on WhatsApp
+                            </button>
+                            <p
+                                style="text-align:center; font-size:0.8rem; color:var(--color-text-light); margin-top:0.5rem;">
+                                <i class="fa-solid fa-lock" style="font-size:0.75rem;"></i>
+                                Your details are only shared with the baker via WhatsApp.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Gallery Modal -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <h2 class="section-title">Our Gallery</h2>
+                <button class="modal-close" id="galleryModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="section-subtitle" style="margin-bottom: 2rem;">A glimpse into our sweet creations.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_thugira_cake.jpg" alt="Thugira Custom 3-Tier Birthday Cake" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_caramel_brownie.jpg" alt="Premium Biscoff Caramel Swirl Brownies" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_loaf_cake.jpg" alt="Decadent Chocolate Fudge Loaf Cake" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_dad_cake.jpg" alt="Custom Chocolate Birthday Cake for Dad & Husband" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_claypot_cake.jpg" alt="Cartoon Character Clay Pot Custom Theme Cake" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_mrmrs_cake.jpg" alt="Elegantly Crafted 2-Tier Mr & Mrs Wedding Cake" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_masha_cake.jpg" alt="Masha & The Bear Custom Birthday Cake" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_macieh_cake.jpg" alt="Macieh Mithra Butterfly Custom Theme Cake" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_heart_cake.jpg" alt="Decadent Chocolate Cake with Red Hearts" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_sebats_star_cake.jpg" alt="Sebat's Home Baker Mint Green Star Cake" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/wedding_cake_premium.jpg" alt="Decadent Purple & White Floral Wedding Cake" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/custom_theme_cake.jpg" alt="Tysha Turns One Butterfly Fairy Custom Cake" loading="lazy">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 2.5rem; margin-bottom: 0.5rem;">
+                    <a href="https://www.instagram.com/sebas_homebaker?igsh=MTduejJjdjhzd2F5Mg==" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+                        <i class="fa-brands fa-instagram" style="font-size: 1.2rem;"></i> View More on Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews Modal -->
+    <div class="modal" id="reviewsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="section-title">Sweet Words</h2>
+                <button class="modal-close" id="reviewsModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="section-subtitle" style="margin-bottom: 2rem;">What our wonderful customers have to say about our bakes.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"I placed my first cake order with her as a 1kg Fudge brownie to one of my colleagues, all my colleagues and family enjoyed the
+                            flavour very well, they gave timely delivery without much damage. She fulfilled all our expectations, happy to receive it from them I highly recommend people in and around malumichampatty to try outthis place, both budget friendly and yummy"</p>
+                        <div class="customer-info">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah J."
+                                class="customer-avatar">
+                            <h4>Divya Priyadharsini</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"We Placed 2 cake orders here, 1st one was a last minute cake and got a Biscoff half kg for my parents wedding anniversary. They liked it very much. Then secondly we placed the master piece planned for my brother's
+                            daughter's 1st birthday. It's bit pricy but quality and taste will comes with tag right?Yes we got the wonderfull 3 tyre layer cake with 3 different flavours with Choco Truffle, Ferrero, Belgium Choco, and it made the celebration 1step ahead with rich and premium taste.
+                            Thanks to the couples who made the dayperfect as 101%...Thank you very much for making our day special..."</p>
+                        <div class="customer-info">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Raj K."
+                                class="customer-avatar">
+                            <h4>Vicay.</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"I ordered a custom Paw Patrol cake for my son's 5th birthday. The attention to detail was
+                            incredible, and it was so moist and delicious."</p>
+                        <div class="customer-info">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya M."
+                                class="customer-avatar">
+                            <h4>Priya M.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="assets/images/logo.png" alt="Seba's Home Baker" class="footer-logo">
+                    <p style="margin-bottom: 1rem; color: #B89EC4;">Crafted with Love, Baked to Perfection. Your premium
+                        destination for custom homemade cakes in Chennai.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Our Cakes</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect With Us</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/sebas_homebaker?igsh=MTduejJjdjhzd2F5Mg=="
+                                target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i>
+                                Instagram</a></li>
+                        <li><a href="https://www.facebook.com/share/1GHNSpp9Cd/" target="_blank"
+                                rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://wa.me/919500351474" target="_blank" rel="noopener noreferrer"><i
+                                    class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="https://maps.app.goo.gl/NaE91gJvwKWTqu9X6?g_st=awb" target="_blank"
+                                rel="noopener noreferrer"><i class="fa-solid fa-map-location-dot"></i> Google Maps</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Seba's Home Baker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions">
+        <a href="https://wa.me/919500351474" target="_blank" class="float-btn float-whatsapp"
+            aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="tel:+919500351474" class="float-btn float-call" aria-label="Call Us"><i
+                class="fa-solid fa-phone"></i></a>
+        <a href="#home" class="float-btn float-top" id="backToTop" aria-label="Back to Top"><i
+                class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Full Screen Image" id="lightbox-img">
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

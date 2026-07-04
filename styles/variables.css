@@ -1,0 +1,71 @@
+:root {
+  /* ============================================
+     Color Palette — Matched to Seba's New Logo
+     Logo colors:
+     - Lavender background:  #F5F0FC
+     - Neon magenta border:  #B91C68
+     - Glowing light pink:   #E85D9E
+     - Deep plum text/apron: #4A1E54
+     - Dusty pink circle:    #DF9BB7
+     ============================================ */
+
+  --color-primary: #F5F0FC;       /* Soft lavender — logo background */
+  --color-secondary: #E8DCF7;     /* Deeper lavender — for section backgrounds */
+  --color-accent: #B91C68;        /* Rich raspberry pink/magenta from glowing ring */
+  --color-accent-light: #E85D9E;  /* Lighter pink for hover states and highlights */
+  --color-dark: #4A1E54;          /* Deep plum/purple — apron & text color tone */
+  --color-rose: #DF9BB7;          /* Soft dusty rose — baker circle background */
+  --color-white: #FFFFFF;
+  --color-text: #2C1133;          /* Very dark violet/plum for body text */
+  --color-text-light: #7A5B80;    /* Muted violet-gray for secondary text */
+
+  /* Legacy alias for compatibility */
+  --color-dark-brown: #4A1E54;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+  --spacing-xl-val: 8rem;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows — tinted with deep plum/magenta for cohesion */
+  --shadow-sm: 0 4px 10px rgba(185, 28, 104, 0.07);
+  --shadow-md: 0 10px 25px rgba(185, 28, 104, 0.10);
+  --shadow-lg: 0 20px 45px rgba(185, 28, 104, 0.14);
+  --shadow-hover: 0 15px 35px rgba(185, 28, 104, 0.22);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+[data-theme="dark"] {
+  --color-primary: #150A1C;
+  --color-secondary: #21112B;
+  --color-accent: #E25199;
+  --color-accent-light: #F07BB3;
+  --color-dark: #E8DCF7;
+  --color-rose: #805170;
+  --color-dark-brown: #E8DCF7;
+  --color-white: #21112B;
+  --color-text: #F5F0FC;
+  --color-text-light: #C4B0CF;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --shadow-hover: 0 15px 30px rgba(226, 81, 153, 0.2);
+}
+
