@@ -861,6 +861,12 @@ footer {
   .about-grid, .contact-grid {
     grid-template-columns: 1fr;
   }
+  .contact-grid {
+    gap: var(--spacing-md);
+  }
+  .contact-info {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
   .timeline-arrow { transform: rotate(90deg); }
   .timeline { flex-direction: column; }
 }
