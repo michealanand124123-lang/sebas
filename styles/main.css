@@ -583,7 +583,18 @@ header.scrolled {
 }
 .stars { color: #FFD700; margin-bottom: 1rem; font-size: 1.2rem; }
 .customer-info { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1rem; }
-.customer-avatar { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+.customer-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  font-size: 1.3rem;
+}
 .customer-info h4 { margin: 0; font-size: 1rem; }
 
 /* FAQ */
@@ -843,16 +854,37 @@ footer {
 @media (max-width: 768px) {
   .modal-content {
     width: 95%;
+    max-height: 90vh;
   }
   .modal-header {
-    flex-direction: column;
-    gap: var(--spacing-md);
-    align-items: flex-start;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.25rem 3.5rem 1.25rem 1.25rem;
+  }
+  .modal-header h2 {
+    font-size: 1.5rem;
   }
   .modal-close {
     position: absolute;
-    top: var(--spacing-md);
-    right: var(--spacing-md);
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+  }
+  .modal-body {
+    padding: 1.25rem;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 280px;
+    gap: 1rem;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
